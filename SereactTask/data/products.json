@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "1",
+    "name": "Nike Air Max 270",
+    "category": "Shoes",
+    "price": 150,
+    "image_url": "https://example.com/nike_air_max_270.jpg"
+  },
+  {
+    "_id": "2",
+    "name": "Adidas Ultraboost",
+    "category": "Shoes",
+    "price": 180,
+    "image_url": "https://example.com/adidas_ultraboost.jpg"
+  },
+  {
+    "_id": "3",
+    "name": "Sony WH-1000XM5",
+    "category": "Headphones",
+    "price": 399,
+    "image_url": "https://example.com/sony_wh1000xm5.jpg"
+  },
+  {
+    "_id": "4",
+    "name": "Apple MacBook Air M2",
+    "category": "Laptops",
+    "price": 1199,
+    "image_url": "https://example.com/macbook_air_m2.jpg"
+  },
+  {
+    "_id": "5",
+    "name": "Samsung Galaxy S23",
+    "category": "Smartphones",
+    "price": 999,
+    "image_url": "https://example.com/samsung_galaxy_s23.jpg"
+  },
+  {
+    "_id": "6",
+    "name": "Canon EOS R5",
+    "category": "Cameras",
+    "price": 3899,
+    "image_url": "https://example.com/canon_eos_r5.jpg"
+  },
+  {
+    "_id": "7",
+    "name": "Logitech MX Master 3",
+    "category": "Accessories",
+    "price": 99,
+    "image_url": "https://example.com/logitech_mx_master_3.jpg"
+  },
+  {
+    "_id": "8",
+    "name": "Bose QuietComfort 45",
+    "category": "Headphones",
+    "price": 329,
+    "image_url": "https://example.com/bose_qc45.jpg"
+  },
+  {
+    "_id": "9",
+    "name": "Apple iPad Pro 12.9",
+    "category": "Tablets",
+    "price": 1099,
+    "image_url": "https://example.com/ipad_pro_12_9.jpg"
+  },
+  {
+    "_id": "10",
+    "name": "Dell XPS 15",
+    "category": "Laptops",
+    "price": 1799,
+    "image_url": "https://example.com/dell_xps_15.jpg"
+  }
+]

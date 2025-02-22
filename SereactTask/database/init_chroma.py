@@ -9,3 +9,4 @@ with open("../data/embeddings.json","r") as f:
 
 for item in embeddings_data:
     collection.add(ids=[item["id"]], embeddings=[item["embedding"]], metadatas=[item["metadata"]])
+print("ChromaDb initialized with product metadata.")
