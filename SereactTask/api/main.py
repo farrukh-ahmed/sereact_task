@@ -4,13 +4,17 @@ import onnxruntime as ort
 from PIL import Image
 from io import BytesIO
 import numpy as np
-from Helper.util import preprocess_image
+import os
+from helper.util import preprocess_image
 from database.chroma_crud import search_embeddings
 from database.mongo_crud import get_product, log_error
 from transformers import CLIPTokenizer
 
+base_path = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(base_path, "../artifacts/clip_model_fp16-new.onnx")
+
 app = FastAPI()
-session = ort.InferenceSession("../artifacts/clip_model_fp16.onnx")
+session = ort.InferenceSession(file_path)
 
 tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch32")
 
@@ -52,8 +56,7 @@ async def match_product(file: UploadFile = None, image_url: str = Form(None), te
 
 
     outputs = session.run(None, {"pixel_values": image_tensor, "input_ids": input_ids})
-    #print("ONNX Model Outputs:", outputs)
-    #print("Fixed Embedding:", embedding)
+
     similar_products = search_embeddings(embedding, n_results=10)
     match_product = []
     for product_id in similar_products["ids"][0]:
