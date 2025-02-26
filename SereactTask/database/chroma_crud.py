@@ -19,10 +19,6 @@ def add_embedding(product_id, embedding, metadata):
 
 # READ: Retrieve embeddings (nearest neighbor search)
 def search_embeddings(query_embedding, n_results=10):
-    print("seeing")
-    print(collection.count())  # Should return a non-zero value
-
-    print(collection.peek())
     similar_products = collection.query(query_embedding, n_results=10)
     return similar_products
 
