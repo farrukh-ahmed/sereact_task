@@ -5,6 +5,7 @@ mongo_uri = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
 client = MongoClient(mongo_uri)
 db = client["product_db"]
 collection = db["products"]
+log_collection = db["logs"]
 
 
 # CREATE: Insert a new product
@@ -28,3 +29,7 @@ def update_product(product_id, update_data):
 def delete_product(product_id):
     result = collection.delete_one({"_id": product_id})
     return f"Deleted {result.deleted_count} document(s)"
+
+
+def log_error(error_message):
+    log_collection.insert_one({"error": error_message})
