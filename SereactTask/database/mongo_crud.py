@@ -15,7 +15,7 @@ def create_product(product_data):
 
 
 # READ: Get a product by ID
-def get_product(product_id):
+def get_product_from_db(product_id):
     return collection.find_one({"_id": product_id})
 
 
