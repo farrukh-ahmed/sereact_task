@@ -1,4 +1,4 @@
-# Project Name
+# Sereact Task
 
 ## Overview
 This project is a **FastAPI-based product matching system** that utilizes ONNX-based deep learning models and ChromaDB for vector search. It allows users to upload an image or provide a URL, and the system retrieves similar products using embeddings.
