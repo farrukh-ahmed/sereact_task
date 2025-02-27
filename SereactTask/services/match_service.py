@@ -10,7 +10,7 @@ from database.mongo_crud import get_product_from_db
 from transformers import CLIPTokenizer
 
 base_path = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(base_path, "../artifacts/clip_model_fp16.onnx")
+file_path = os.path.join(base_path, "../artifacts/clip_model_fp16-new.onnx")
 
 session = ort.InferenceSession(file_path)
 tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch32")

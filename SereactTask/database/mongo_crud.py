@@ -33,3 +33,7 @@ def delete_product(product_id):
 
 def log_error(error_message):
     log_collection.insert_one({"error": error_message})
+
+
+def get_logs():
+    return list(log_collection.find({}, {"_id": 0}))
