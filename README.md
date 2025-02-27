@@ -38,8 +38,8 @@ This project is a **FastAPI-based product matching system** that utilizes ONNX-b
 
 ### **1. Clone the Repository**
 ```sh
-$ git clone <repo-url>
-$ cd <project-folder>
+$ git clone https://github.com/farrukh-ahmed/sereact_task.git
+$ cd SereactTask
 ```
 
 ### **2. Run the Application with Docker**
